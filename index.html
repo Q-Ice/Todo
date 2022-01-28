@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+</head>
+
+<body>
+    <div id="mobie">
+        <div id="header" class="item-container">
+            <div class="nav-bar">
+                <i class="icon-bar fas fa-bars"></i>
+                <div class="bars-more">
+                    <div class="account">
+                        <img class="img-account" src="/assets/img/user.jpg" alt="">
+                        <h3 class="name-account">Todo app</h3>
+                        <i class="icon-setting fas fa-cog setting"></i>
+                    </div>
+                    <hr style="margin-top: 5px">
+                    <div class="tag-note">
+                        <i class="icon-other fas fa-inbox"><span class="text-tag">Inbox</span></i>
+                    </div>
+                    <div class="tag-note">
+                        <i class="icon-other fas fa-calendar-day"><span class="text-tag">Today</span></i>
+                    </div>
+                    <div class="tag-note p-more">
+                        <i class="icon-other fas fa-project-diagram"><span class="text-tag">Projects</span></i>
+                        <i class="icon-down fas fa-chevron-down"></i>
+                        <div id="more-pj">
+                            <div class="name-project">
+                                <i class="icon-other2 fas fa-circle"></i>Project 1
+                            </div>
+                            <div class="name-project">
+                                <i class="icon-other2 fas fa-circle"></i>Project 2
+                            </div>
+                            <div class="manage-project name-project">
+                                <i class="icon-other2 fas fa-cog setting"></i>Manage Project
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-month">
+                    <span style="line-height: 40px; font-weight: bold; font-size: 23px;">December 20</span>
+                </div>
+                <div class="calendar align-center">
+                    <i class="icon-calendar far fa-calendar-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--day-Week-->
+        <div class="item-container all-week">
+            <div class="week">
+                <div class="day-week">
+                    &nbsp;17<br>Mon
+                </div>
+                <div class="day-week">
+                    &nbsp;18<br>Tue
+                </div>
+                <div class="day-week">
+                    &nbsp;19<br>Wed
+                </div>
+                <div class="day-week current-day">
+                    &nbsp;20<br>Thu
+                </div>
+                <div class="day-week">
+                    &nbsp;21<br>&nbsp;Fri
+                </div>
+                <div class="day-week">
+                    &nbsp;22<br>Sat
+                </div>
+                <div class="day-week">
+                    &nbsp;23<br>Sun
+                </div>
+            </div>
+        </div>
+
+        <!--Project-->
+        <p class="name-tag">
+            <i class="icon-other fas fa-project-diagram">
+                <span class="text-tag">Project
+                    <span class="number-task">(2)</span>
+                </span></i>
+        <p>
+        <div class="container-project">
+            <div class="item-project">
+                <!-- <div class="day-start-project">12 Dec 2020</div> -->
+                <div class="name-pj">Project 1</div>
+                <div class="info-progress">
+                    <p style="font-size: 14px">Progress</p>
+                    <p style="font-size: 14px">80%</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="days-left">
+                    <i style="font-size: 25px; margin-left: 5px;" class="fab fa-battle-net"></i>
+                    <div style="font-size: 13px" class="number-day-left">
+                        2 Days Left
+                    </div>
+                </div>
+            </div>
+            <div class="item-project">
+                <!-- <div class="day-start-project">12 Dec 2020</div> -->
+                <div class="name-pj">Project 2</div>
+                <div class="info-progress">
+                    <p style="font-size: 14px">Progress</p>
+                    <p style="font-size: 14px">50%</p>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar second-progress" style="width: 50%"></div>
+                </div>
+                <div class="days-left">
+                    <i style="font-size: 25px; margin-left: 5px;" class="fab fa-battle-net"></i>
+                    <div style="font-size: 13px" class="number-day-left">
+                        4 Days Left
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Today todo-->
+        <p class="name-tag"><i class="fas fa-calendar-day">
+                <span class="text-tag">Today
+                    <span class="number-task">(8)</span>
+                </span></i>
+        </p>
+        <div class="list-todo">
+            <div class="number-todo todo-number1">
+                <input type="checkbox" class="box-check">
+                <p class="text-nt">Work 1</p>
+            </div>
+            <div class="number-todo todo-number2">
+                <input type="checkbox">
+                <p class="text-nt">Work 2</p>
+            </div>
+            <div class="number-todo todo-number3">
+                <input type="checkbox">
+                <p class="text-nt">Work 3</p>
+            </div>
+            <div class="number-todo todo-number4">
+                <input type="checkbox">
+                <p class="text-nt">Work 4</p>
+            </div>
+            <div class="number-todo todo-number5">
+                <input type="checkbox">
+                <p class="text-nt">Work 5</p>
+            </div>
+            <div class="number-todo todo-number6">
+                <input type="checkbox">
+                <p class="text-nt">Work 6</p>
+            </div>
+            <div class="number-todo todo-number7">
+                <input type="checkbox">
+                <p class="text-nt">Work 7</p>
+            </div>
+            <div class="number-todo todo-number8">
+                <input type="checkbox">
+                <p class="text-nt">Work 8</p>
+            </div>
+        </div>
+
+
+        <!--Circle-Plus-->
+        <div class="item-container circle-plus">
+            <i class="icon-plus fas fa-plus"></i>
+            <div class="area-create">
+                <div class="text-div">
+                    <textarea name="text-note" id="text-note" placeholder="e.g Write to do list" autofocus required></textarea>
+                </div>
+                <div class="other-note">
+                    <div class="note-other note-today">
+                        <i class="icon-other fas fa-calendar-day">&nbsp;<span
+                                style="font-family: cursive; font-size: 15px">Today</span></i>
+                    </div>
+                    <div class="note-other note-inbox">
+                        <i class="icon-other fas fa-inbox">&nbsp;<span
+                                style="font-family: cursive; font-size: 15px">Inbox</span></i>
+                    </div>
+                </div>
+
+                <div class="tag-more">
+                    <div>
+                        <i class="icon-tag fas fa-tag"></i>
+                        <i class="icon-tag far fa-flag"></i>
+                        <i class="icon-tag far fa-clock"></i>
+                        <i class="icon-tag ok fas fa-check"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
