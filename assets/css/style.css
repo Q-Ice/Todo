@@ -316,7 +316,7 @@ body {
     border-radius: 50%;
 }
 
-[type="checkbox"]:checked .text-nt {
+[type="checkbox"]:checked + .text-nt {
     text-decoration: line-through;
 }
 
