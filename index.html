@@ -8,6 +8,7 @@
     <title>Todo</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="https://kit.fontawesome.com/c909c23c5d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -43,9 +44,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+            <div id="overlay"></div>
             <div class="calendar-day">
                 <div class="day-month">
                     <span style="line-height: 40px; font-weight: bold; font-size: 23px;">December 20</span>
@@ -69,7 +70,7 @@
                     &nbsp;19<br>Wed
                 </div>
                 <div class="day-week current-day">
-                    &nbsp;20<br>Thu
+                    20<br>Thu
                 </div>
                 <div class="day-week">
                     &nbsp;21<br>&nbsp;Fri
@@ -128,43 +129,19 @@
         </div>
         <!--Today todo-->
         <p class="name-tag"><i class="fas fa-calendar-day">
-                <span class="text-tag">Today
-                    <span class="number-task">(8)</span>
+                <span class="text-tag number-task-list">Today
+                    <span class="number-task">(0)</span>
                 </span></i>
         </p>
         <div class="list-todo">
-            <div class="number-todo todo-number1">
-                <input type="checkbox" class="box-check">
+           <!--  <div class="number-todo">
+                <div class="box-check box-check1">
+                    <i class="check1 fa-solid fa-circle"></i>
+                    <i class="check2 fa-solid fa-circle-check"></i>
+                </div>
                 <p class="text-nt">Work 1</p>
-            </div>
-            <div class="number-todo todo-number2">
-                <input type="checkbox">
-                <p class="text-nt">Work 2</p>
-            </div>
-            <div class="number-todo todo-number3">
-                <input type="checkbox">
-                <p class="text-nt">Work 3</p>
-            </div>
-            <div class="number-todo todo-number4">
-                <input type="checkbox">
-                <p class="text-nt">Work 4</p>
-            </div>
-            <div class="number-todo todo-number5">
-                <input type="checkbox">
-                <p class="text-nt">Work 5</p>
-            </div>
-            <div class="number-todo todo-number6">
-                <input type="checkbox">
-                <p class="text-nt">Work 6</p>
-            </div>
-            <div class="number-todo todo-number7">
-                <input type="checkbox">
-                <p class="text-nt">Work 7</p>
-            </div>
-            <div class="number-todo todo-number8">
-                <input type="checkbox">
-                <p class="text-nt">Work 8</p>
-            </div>
+                <span class="delete">&times</span>
+            </div> -->
         </div>
 
 
@@ -173,7 +150,8 @@
             <i class="icon-plus fas fa-plus"></i>
             <div class="area-create">
                 <div class="text-div">
-                    <textarea name="text-note" id="text-note" placeholder="e.g Write to do list" autofocus required></textarea>
+                    <textarea name="text-note" id="text-note" placeholder="Write to do list" autofocus
+                        required></textarea>
                 </div>
                 <div class="other-note">
                     <div class="note-other note-today">
@@ -198,6 +176,7 @@
             </div>
         </div>
     </div>
+    <script src="./todo.js"></script>
 </body>
 
 </html>
