@@ -12,7 +12,7 @@ const todo = $('.text-nt')
 
 let listTodo = []
 let listBoxCheck = []
-/* localStorage.setItem('listBoxCheck', JSON.stringify(listBoxCheck)); */
+
 if (localStorage.getItem('listTodo')) {
     localStorage.setItem('listTodo', JSON.stringify(listTodo));
 }
@@ -93,6 +93,12 @@ const app = {
 
     init: function () {
         _this = this
+        if (localStorage.getItem('listTodo')) {
+            localStorage.setItem('listTodo', JSON.stringify(listTodo));
+        }
+        if (localStorage.getItem('listBoxCheck')) {
+            localStorage.setItem('listBoxCheck', JSON.stringify(listBoxCheck));
+        }
         listTodo = JSON.parse(localStorage.getItem('listTodo'))
         listBoxCheck = JSON.parse(localStorage.getItem('listBoxCheck'))
         submit.onclick = function () {
