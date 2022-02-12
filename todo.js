@@ -11,7 +11,7 @@ const deleteTodo = $('.delete')
 const todo = $('.text-nt')
 
 let listTodo = []
-/* localStorage.setItem('listTodo', JSON.stringify(listTodo)); */
+localStorage.setItem('listTodo', JSON.stringify(listTodo));
 const app = {
     addTodo: function(item) {
         listTodo.push(item)
