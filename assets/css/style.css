@@ -9,12 +9,12 @@ html {
 }
 
 body {
-    background-color: #CFFFFF;
+    background-color: #e6ffff;
     height: 780px;
 }
 
 #mobie {
-    height: 750px;
+    height: 760px;
     width: 400px;
     position: relative;
     top: 50%;
@@ -24,7 +24,8 @@ body {
     overflow-y: auto;
     border-radius: 25px;
     margin-top: 60px;
-    background-image: linear-gradient(to bottom right,#a6f0f0, #d0f0ea);
+    /* background-image: linear-gradient(to bottom right,#a6f0f0, #d0f0ea); */
+    background-color: #b3e5fc;
 }
 
 #mobie::-webkit-scrollbar {
@@ -45,7 +46,7 @@ body {
     width: calc(100% + 2px);
     height: 50px;
     display: flex;
-    background-color: #90c5dd;
+    background-color: #82b3c9;
     align-items: center;
     position: sticky;
     top: 0;
@@ -78,22 +79,55 @@ body {
     top: 0;
     bottom: 0;
     width: 75%;
-    height: 745px;
-    background-color: #b9e5fa;
-    display: none;
+    height: 750px;
+    background-color: #82b3c9;
     border-radius: 25px;
+    animation-name: barmore;
+    animation-duration: 0.3s;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 1;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 755px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.nav-bar {
+    flex-basis: stretch;
+    padding: 5px 10px 0 0;
 }
 
 .nav-bar:hover .bars-more {
+    transform: translateX(0);
+}
+
+.nav-bar:hover ~ #overlay {
     display: block;
-    animation-name: barmore;
-    animation-duration: 2s;
+    animation: overlay .2s;
+}
+
+@keyframes overlay {
+    from { opacity: 0;}
+    to { opacity: 1; }
 }
 
 @keyframes barmore {
-    from {transform: translateX(-100%);}
-    to {transform: translateX(0);}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+ 
 
 .account {
     display: flex;
@@ -124,7 +158,7 @@ body {
 }
 
 .tag-note:hover {
-    background-color: #fff;
+    background-color: #e6ffff;
     cursor: pointer;
     transition: 1s;
 }
@@ -133,18 +167,16 @@ body {
     float: right;
     margin-right: 40px;
     margin-top: 8px;
-    transition: 1s;
+    transition: transform 0.2s;
 }
 
 .p-more:hover .icon-down {
     transform: rotate(180deg);
-    
 }
 
 .p-more:hover #more-pj {
     display: block;
-    background-color: #ddd;
-    
+    background-color: #b3e5fc;
 }
 
 .text-tag {
@@ -204,14 +236,15 @@ body {
     padding: 20px 0;
     margin: -9px 0;
     width: 12%;
-    background-color: #7ab4e4;
+    background-color: #82b3c9;
     border-radius: 45px;
     text-align: center;
 }
 
 .current-day:hover{
-    transition-duration: 1s;
-    background-color: #5288bb;
+    transition-duration: 0.2s;
+    box-shadow: 1px 2px 4px #333;
+    transform: translateY(-1px);
 }
 
 .name-tag {
@@ -234,17 +267,17 @@ body {
 .item-project {
     width: 40%;
     height: 120px;
-    background-color: #7acde2;
+    background-color: #82b3c9;
     border-radius: 15px;
     margin-top: 15px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .item-project:hover {
     cursor: pointer;
     box-shadow: 5px 5px 20px #333;
+    transform: translateY(-2px);
 }
 
 .name-pj {
@@ -274,7 +307,7 @@ body {
 .progress-bar {
     height: 10px;
     width: 80%;
-    background-color: #fff;
+    background-color: #e6ffff;
     border-radius: 5px;
     
 }
@@ -287,7 +320,7 @@ body {
 .number-day-left {
     display: inline-block;
     float: right;
-    background-color: rgb(250, 249, 249);
+    background-color: #e6ffff;
     padding: 0 5px;
     border-radius: 10px;
     margin-right: 8px;
@@ -296,52 +329,78 @@ body {
 .number-todo {
     width: 80%;
     height: 50px;
-    background-color: rgb(188, 192, 201);
+    background-color: #82b3c9;
     margin: 15px auto;
-    display:flex;
+    display: flex;
     align-items: center;
     border-radius: 15px;
+    font-size: 20px;
+}
+
+.delete {
+    flex-basis: 30px;
+    height: 100%;
+    line-height: 48px;
+    font-size: 25px;
+    padding: 0 10px;
+    border-radius: 4px 15px 15px 4px;
+}
+
+.delete:hover {
+    background-color: rgb(252, 82, 82);
+    color: #fff;
 }
 
 .number-todo:hover {
     cursor: pointer;
     box-shadow: 5px 5px 10px #333;
-    background-color: rgb(130, 133, 138);
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
-[type="checkbox"] {
-    height: 20px;
-    width: 20px;
-    flex-grow: 1;
-    border-radius: 50%;
+.box-check {
+    flex-basis: 40px;
+    margin: 0 0 0 10px;
 }
 
-[type="checkbox"]:checked + .text-nt {
-    text-decoration: line-through;
+.number-todo .box-check1 .check1 {
+    display: block;
 }
+
+.number-todo .box-check2 .check2 {
+    display: block;
+}
+
+.box-check .check1, .box-check .check2 {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+}
+
 
 .text-nt {
-    flex-grow: 9;
+    flex-basis: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .circle-plus {
-    position: sticky;
-    right: 0;
-    bottom: 15px;
+    position: fixed;
+    right: 15px;
+    bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #fff;
-    margin: 15px;
-    float: right;
+    background-color: #e6ffff;
 }
 
 .icon-plus {
     font-size: 25px;
-    color: rgb(147, 170, 206);
+    color: #333;
 }
 
 .icon-plus:hover {
@@ -351,9 +410,10 @@ body {
 .area-create {
     position: absolute;
     left: -327px;
-    background-color: rgb(124, 145, 214);
+    background-color: #82b3c9;
     width: 392px;
-    height: 350px;
+    height: 210px;
+    bottom: -15px;
     display: none;
     border-radius: 10px;
 }
@@ -365,23 +425,30 @@ body {
 }
 
 @keyframes plus {
-    from {transform: translateY(100%);}
-    to {transform: translateY(0);}
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .text-div {
     width: 95%;
-    height: 25%;
+    height: 40%;
     margin: 0 auto;
     margin-top: 20px;
 }
 
-#text-note {
+#text-note{
     width: 100%;
     height: 100%;
-    background-color: #fff;
     font-size: 20px;
     border-radius: 15px;
+    resize: none;
+    padding: 10px 0 5px 10px;
+    line-height: 20px;
 }
 
 #text-note::-webkit-scrollbar {
@@ -396,26 +463,27 @@ body {
     margin: 10px;
     height: 25px;
     width: 70px;
-    background-color: #fff;
+    background-color: #e6ffff;
     text-align: center;
     border-radius: 5px;
-    border: 2px solid #ccc;
     
 }
 
 .note-today {
-    color: rgb(127, 225, 238); 
+    color: #333; 
+    line-height: 26px;
 }
 
 .note-today:hover, .note-inbox:hover {
     cursor: pointer;
-    background-color: #ddd;
-    color: #333;
-    transition: 1s;
+    background-color: #b3e5fc;
+    box-shadow: 1px 2px #8888;
+    color: #fff;
 }
 
 .note-inbox {
-    color: rgb(153, 216, 133);
+    line-height: 26px;
+    color: #333;
 }
 
 .icon-other {
@@ -437,5 +505,5 @@ body {
     color: #fff;
     cursor: pointer;
     border-radius: 50%;
-    transition: 1s;
+    transition: 0.5s;
 }
