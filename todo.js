@@ -89,9 +89,11 @@ const app = {
         _this = this
         listTodo = JSON.parse(localStorage.getItem('listTodo'))
         listBoxCheck = JSON.parse(localStorage.getItem('listBoxCheck'))
-         if (!listTodo) {
+        if (!listTodo) {
             localStorage.setItem('listTodo', JSON.stringify(listTodo));
             localStorage.setItem('listBoxCheck', JSON.stringify(listBoxCheck));
+            listTodo = JSON.parse(localStorage.getItem('listTodo'))
+            listBoxCheck = JSON.parse(localStorage.getItem('listBoxCheck'))
         }
         submit.onclick = function () {
             const item = areaText.value
